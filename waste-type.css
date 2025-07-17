@@ -1,0 +1,81 @@
+/* Waste Types Styling */
+.waste-types-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.waste-types-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.waste-categories {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.waste-section {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.waste-section:hover {
+    transform: translateY(-5px);
+}
+
+.waste-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.waste-items {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Section-specific colors */
+#plastic {
+    border-left: 4px solid #e74c3c;
+}
+
+#metal {
+    border-left: 4px solid #95a5a6;
+}
+
+#paper {
+    border-left: 4px solid #f1c40f;
+}
+
+#glass {
+    border-left: 4px solid #3498db;
+}
+
+#e-waste {
+    border-left: 4px solid #9b59b6;
+}
+
+#organic {
+    border-left: 4px solid #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .waste-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    .waste-types-container {
+        padding: 1rem;
+    }
+}
+
+/* Add your custom styles below */ 

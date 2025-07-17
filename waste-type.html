@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecycLORE - Plastic Recycling Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plastic-style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="page-loader">
+        <div class="loader-container">
+            <span class="flower-loader">Loading…</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="images/logo6.png" alt="logo">
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="waste-type.html">Waste Types</a></li>
+            <li><a href="about us.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!--cursor-->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    
+    <!-- Waste Types Section -->
+    <section id="waste-types" class="waste-types">
+        <div class="container">
+            <h2 class="section-title">Waste Types</h2>
+            <p class="section-subtitle">Learn how to properly recycle different types of waste</p>
+            <div class="waste-types-container">
+                <div class="waste-type-card">
+                    <div class="waste-icon paper"></div>
+                    <h3>Paper</h3>
+                    <p>Newspapers, magazines, cardboard, and office paper</p>
+                    <a href="paper.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="waste-type-card">
+                    <div class="waste-icon plastic"></div>
+                    <h3>Plastic</h3>
+                    <p>Bottles, containers, packaging, and household items</p>
+                    <a href="plastic.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="waste-type-card">
+                    <div class="waste-icon metal"></div>
+                    <h3>Metal</h3>
+                    <p>Aluminum cans, steel cans, and scrap metal</p>
+                    <a href="Metal.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="waste-type-card">
+                    <div class="waste-icon glass"></div>
+                    <h3>Glass</h3>
+                    <p>Bottles, jars, and containers</p>
+                    <a href="Glass.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Recyc<span>LORE</span></h2>
+                <p>Making recycling knowledge accessible to all</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="News.html">News</a></li>
+                        <li><a href="waste-type.html">Waste Types</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Recycling Guide</a></li>
+                        <li><a href="#">Education Materials</a></li>
+                        <li><a href="#">Community Programs</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RecycLORE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- loader js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fix loader - hide it quickly
+            const loader = document.querySelector('.page-loader');
+            // Hide loader after a short delay
+            setTimeout(function() {
+                loader.classList.add('loaded');
+            }, 900); // Reduced from 1500ms to 800ms
+        });
+    </script>
+
+    <!-- cursor js -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const coords = {x: 0, y: 0};
+        const circles = document.querySelectorAll(".circle");
+
+        // Initialize circles
+        circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+            // Add fixed positioning to make it follow the cursor
+            circle.style.position = "fixed";
+            circle.style.pointerEvents = "none";
+            circle.style.zIndex = "9999";
+        });
+
+        // Track mouse position
+        window.addEventListener("mousemove", function(e){
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+        });
+
+        // Animation function
+        function animateCircles(){
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index){
+                // Position circle at mouse location minus half its size to center it
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+
+                // Scale based on position in the trail
+                circle.style.scale = (circles.length - index) / circles.length;
+                
+                // Store current position
+                circle.x = x;
+                circle.y = y;
+
+                // Calculate next circle position for trailing effect
+                const nextCircle = circles[index + 1] || circles[0];  
+                x += (nextCircle.x - x) * 0.3;  
+                y += (nextCircle.y - y) * 0.3; 
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        // Start animation
+        animateCircles();
+    });
+    </script>
+
+     <!-- tutorial -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
+    const steps = document.querySelectorAll('.step');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const indicators = document.querySelectorAll('.indicator');
+    const animationContainer = document.querySelector('.tutorial-animation');
+    const statusText = document.querySelector('.status');
+    
+    // Tutorial steps descriptions for status
+    const statusMessages = [
+        "Preparing",
+        "Checking Type",
+        "Cleaning",
+        "Removing Parts",
+        "Compressing"
+    ];
+    
+    // Current step
+    let currentStep = 1;
+    const totalSteps = steps.length;
+    
+    // Initialize
+    updateUI();
+    
+    // Event listeners
+    prevBtn.addEventListener('click', goToPrevStep);
+    nextBtn.addEventListener('click', goToNextStep);
+    
+    // Navigation functions
+    function goToNextStep() {
+        if (currentStep < totalSteps) {
+            currentStep++;
+            updateUI();
+        }
+    }
+    
+    function goToPrevStep() {
+        if (currentStep > 1) {
+            currentStep--;
+            updateUI();
+        }
+    }
+    
+    // Update UI based on current step
+    function updateUI() {
+        // Update active step
+        steps.forEach((step, index) => {
+            if (index + 1 === currentStep) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+        
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            if (index + 1 === currentStep) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+        
+        // Update status message
+        statusText.textContent = statusMessages[currentStep - 1];
+        
+        // Update animation
+        animationContainer.setAttribute('data-active-step', currentStep);
+        
+        // Update buttons
+        prevBtn.disabled = currentStep === 1;
+        nextBtn.disabled = currentStep === totalSteps;
+        
+        // Add specific animations for each step
+        animateStep(currentStep);
+    }
+    
+    // Step-specific animations
+    function animateStep(step) {
+        const bottle = document.querySelector('.bottle');
+        const leftHand = document.querySelector('.left-hand');
+        const rightHand = document.querySelector('.right-hand');
+        
+        // Reset any existing animations
+        bottle.style.animation = '';
+        leftHand.style.animation = '';
+        rightHand.style.animation = '';
+        
+        // Apply step-specific animations
+        switch(step) {
+            case 1:
+                // Intro animation
+                bottle.style.animation = 'float 2s infinite alternate ease-in-out';
+                break;
+                
+            case 2:
+                // Checking recycling symbol
+                bottle.style.animation = 'rotate 3s infinite';
+                break;
+                
+            case 3:
+                // Rinsing animation
+                bottle.style.animation = 'shake 0.5s infinite';
+                leftHand.style.animation = 'moveIn 0.5s forwards, grab 1s 0.5s infinite';
+                rightHand.style.animation = 'moveIn 0.5s forwards, grab 1s 0.5s infinite';
+                break;
+                
+            case 4:
+                // Removing parts
+                bottle.style.animation = 'pulse 1s infinite';
+                break;
+                
+            case 5:
+                // Flattening
+                bottle.style.animation = 'flatten 1s forwards';
+                break;
+        }
+    }
+    
+    // Create keyframe animations
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+        @keyframes float {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(-50%, -60%); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: translate(-50%, -50%) rotateZ(0deg); }
+            50% { transform: translate(-50%, -50%) rotateZ(180deg); }
+            100% { transform: translate(-50%, -50%) rotateZ(360deg); }
+        }
+        
+        @keyframes shake {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            25% { transform: translate(-52%, -50%) rotate(5deg); }
+            50% { transform: translate(-50%, -50%) rotate(0deg); }
+            75% { transform: translate(-48%, -50%) rotate(-5deg); }
+            100% { transform: translate(-50%, -50%) rotate(0deg); }
+        }
+        
+        @keyframes moveIn {
+            0% { opacity: 0; transform: translateY(-50%) translateX(100px); }
+            100% { opacity: 1; transform: translateY(-50%) translateX(0); }
+        }
+        
+        @keyframes grab {
+            0% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(0.95); }
+            100% { transform: translateY(-50%) scale(1); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+        
+        @keyframes flatten {
+            0% { transform: translate(-50%, -50%) rotateY(0) scale(1); }
+            50% { transform: translate(-50%, -50%) rotateY(90deg) scale(1); }
+            100% { transform: translate(-50%, -50%) rotateY(0) scale(0.3, 1); }
+        }
+    `;
+    document.head.appendChild(styleSheet);
+    
+    // Add interactive features for the tabs
+    const tabLinks = document.querySelectorAll('.selector-tabs a');
+    
+    tabLinks.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all tabs
+            tabLinks.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Here you could also change the tutorial content
+            // based on the selected tab
+        });
+    });
+    
+    // Help button functionality
+    const helpBtn = document.querySelector('.help-btn');
+    
+    helpBtn.addEventListener('click', function() {
+        alert('This would show a more detailed image guide for recycling plastic items.');
+    });
+});
+      </script>
+
+
+</body>
+</html>

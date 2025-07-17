@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecycLORE - Discover the World Through Recycling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="page-loader">
+        <div class="loader-container">
+            <span class="flower-loader">Loading…</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="images/logo6.png" alt="logo">
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="waste-type.html">Waste Types</a></li>
+            <li><a href="about us.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!--cursor-->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Hero Section -->
+        <section class="heri">
+            <div class="heri-content">
+                <div class="heri-container">
+                    <i class="fas fa-recycle logo-icon"></i>
+                    <h1 class="heri-text">Selamat Datang di RecycLORE</h1>
+                </div>
+                <div class="heri-text">
+                    <p class="sub">Tempat di mana edukasi dan eksplorasi bertemu dalam semangat menjaga lingkungan</p>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="floating-icon" data-icon="🌱"></div>
+                <div class="floating-icon" data-icon="♻️"></div>
+                <div class="floating-icon" data-icon="🌍"></div>
+                <div class="floating-icon" data-icon="🌿"></div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission">
+            <h3 class="section-title">Misi Kami</h3>
+            <div class="mission-grid">
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-icon">🧭</div>
+                    <h4>Menjelajah</h4>
+                    <p>Dunia sampah dan daur ulang dengan pendekatan yang inovatif dan menarik</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mission-icon">📚</div>
+                    <h4>Mengedukasi</h4>
+                    <p>Masyarakat dengan informasi yang mudah dipahami dan dapat diterapkan</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mission-icon">🌍</div>
+                    <h4>Memberdayakan</h4>
+                    <p>Generasi muda untuk peduli terhadap lingkungan dan masa depan bumi</p>
+                </div>
+            </div>
+        </section>
+
+       <!-- Logo Display Section -->
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/logo6.png" alt="RecycLORE Vision" class="section-image">
+        </div>
+    </section
+
+        <!-- Call to Action -->
+        
+        <section class="cta">
+            <div class="cta-content">
+                <h3 class="cta-title">Mari Bergabung dengan Gerakan Hijau</h3>
+                <div class="cta-text">
+                    <p class="cta-slogan">
+                        <span class="cta-line">Mari belajar.</span>
+                        <span class="cta-line">Mari peduli.</span>
+                        <span class="cta-line">Mari daur ulang</span>
+                    </p>
+                    <p class="cta-brand">— bersama <strong>RecycLORE</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Recyc<span>LORE</span></h2>
+                <p>Making recycling knowledge accessible to all</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#waste-types">Waste Types</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Recycling Guide</a></li>
+                        <li><a href="#">Education Materials</a></li>
+                        <li><a href="#">Community Programs</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RecycLORE. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- loader js -->
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            // Fix loader - hide it quickly
+            const loader = document.querySelector('.page-loader');
+            // Hide loader after a short delay
+            setTimeout(function() {
+                loader.classList.add('loaded');
+            }, 900); // Reduced from 1500ms to 800ms
+            
+            // Category filtering
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const newsItems = document.querySelectorAll('.news-item');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show all or filter by category
+                    newsItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+        </script>
+
+    <!-- cursor js -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const coords = {x: 0, y: 0};
+        const circles = document.querySelectorAll(".circle");
+
+        // Initialize circles
+        circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+            // Add fixed positioning to make it follow the cursor
+            circle.style.position = "fixed";
+            circle.style.pointerEvents = "none";
+            circle.style.zIndex = "9999";
+        });
+
+        // Track mouse position
+        window.addEventListener("mousemove", function(e){
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+        });
+
+        // Animation function
+        function animateCircles(){
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index){
+                // Position circle at mouse location minus half its size to center it
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+
+                // Scale based on position in the trail
+                circle.style.scale = (circles.length - index) / circles.length;
+                
+                // Store current position
+                circle.x = x;
+                circle.y = y;
+
+                // Calculate next circle position for trailing effect
+                const nextCircle = circles[index + 1] || circles[0];  
+                x += (nextCircle.x - x) * 0.3;  
+                y += (nextCircle.y - y) * 0.3; 
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        // Start animation
+        animateCircles();
+        
+    });
+    </script>
+
+    <!-- about us js -->
+     <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.story-section, .mission-vision, .values-section, .stats-section, .team-section, .cta-section').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start) + '+';
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target + '+';
+                }
+            }
+            updateCounter();
+        }
+
+        // Animate stats when they come into view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numbers = entry.target.querySelectorAll('.stat-number');
+                    numbers.forEach(num => {
+                        const target = parseInt(num.textContent);
+                        animateCounter(num, target);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    </script>
+</body>
+</html> 
